@@ -81,7 +81,8 @@ default['conda']['url']                           = node['download_url'] + "/Min
 
 default['conda']['user']                          = node['install']['user'].empty? ? 'anaconda' : node['install']['user']
 default['conda']['group']                         = node['install']['user'].empty? ? 'anaconda' : node['install']['user']
-
+default['conda']['uid']                           = "10070"
+default['conda']['gid']                           = "10071"
 default['conda']['dir']                           = node['install']['dir'].empty? ? "/srv/hops/anaconda" : node['install']['dir'] + "/anaconda"
 
 default['conda']['home']                          = "#{node['conda']['dir']}/anaconda-#{node['conda']['python']}-#{node['conda']['version']}"
